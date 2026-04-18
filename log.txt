@@ -1,0 +1,1181 @@
+Cluster distribution:
+cluster
+0    100
+1    118
+2    270
+3     11
+Name: count, dtype: int64
+
+Cluster characteristics (mean values):
+cluster  annual_return  annual_volatility  ...   kurtosis  recent_1y_return
+0             0.391228           0.376389  ...   9.464013          0.446007
+1             0.154138           0.455686  ...  15.069556          0.065009
+2             0.136296           0.305755  ...  11.602576          0.106959
+3             0.926529           0.696369  ...  14.321900          2.207875
+
+
+1. 兩個模型的預測
+=== 股价趋势预测任务 ===
+选择的股票: ['RSG', 'AZO', 'FCX', 'META', 'CEG', 'PWR', 'NVDA', 'TSLA']
+
+处理股票: RSG
+Training models:   0%|          | 0/8 [00:00<?, ?it/s]标签分布: {1.0: 719, 2.0: 317, 0.0: 197}
+
+RSG - Random Forest Results:
+Accuracy: 0.6761
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.71      0.26      0.38        39
+        Flat       0.67      0.92      0.77       144
+          Up       0.69      0.39      0.50        64
+
+    accuracy                           0.68       247
+   macro avg       0.69      0.52      0.55       247
+weighted avg       0.68      0.68      0.64       247
+
+
+RSG - Gradient Boosting Results:
+Accuracy: 0.6275
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.67      0.21      0.31        39
+        Flat       0.64      0.88      0.74       144
+          Up       0.56      0.31      0.40        64
+
+    accuracy                           0.63       247
+   macro avg       0.62      0.47      0.48       247
+weighted avg       0.62      0.63      0.58       247
+
+
+处理股票: AZO
+Training models:  12%|█▎        | 1/8 [00:01<00:13,  1.87s/it]标签分布: {1.0: 557, 2.0: 402, 0.0: 274}
+
+AZO - Random Forest Results:
+Accuracy: 0.6316
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.56      0.36      0.44        55
+        Flat       0.61      0.73      0.66       112
+          Up       0.71      0.68      0.69        80
+
+    accuracy                           0.63       247
+   macro avg       0.62      0.59      0.60       247
+weighted avg       0.63      0.63      0.62       247
+
+Training models:  25%|██▌       | 2/8 [00:03<00:09,  1.55s/it]
+AZO - Gradient Boosting Results:
+Accuracy: 0.5425
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.41      0.24      0.30        55
+        Flat       0.55      0.70      0.62       112
+          Up       0.58      0.54      0.56        80
+
+    accuracy                           0.54       247
+   macro avg       0.51      0.49      0.49       247
+weighted avg       0.53      0.54      0.53       247
+
+
+处理股票: FCX
+标签分布: {2.0: 506, 0.0: 411, 1.0: 316}
+
+FCX - Random Forest Results:
+Accuracy: 0.6275
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.63      0.62      0.63        82
+        Flat       0.51      0.41      0.46        63
+          Up       0.68      0.76      0.72       102
+
+    accuracy                           0.63       247
+   macro avg       0.61      0.60      0.60       247
+weighted avg       0.62      0.63      0.62       247
+
+
+FCX - Gradient Boosting Results:
+Accuracy: 0.5101
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.51      0.49      0.50        82
+        Flat       0.33      0.22      0.26        63
+          Up       0.58      0.71      0.63       102
+
+    accuracy                           0.51       247
+   macro avg       0.47      0.47      0.47       247
+weighted avg       0.49      0.51      0.49       247
+
+
+处理股票: META
+Training models:  38%|███▊      | 3/8 [00:04<00:07,  1.56s/it]标签分布: {2.0: 479, 1.0: 400, 0.0: 354}
+
+META - Random Forest Results:
+Accuracy: 0.6518
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.72      0.68      0.70        71
+        Flat       0.58      0.47      0.52        80
+          Up       0.65      0.78      0.71        96
+
+    accuracy                           0.65       247
+   macro avg       0.65      0.64      0.64       247
+weighted avg       0.65      0.65      0.65       247
+
+
+META - Gradient Boosting Results:
+Accuracy: 0.5344
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.61      0.46      0.53        71
+        Flat       0.48      0.36      0.41        80
+          Up       0.53      0.73      0.61        96
+
+    accuracy                           0.53       247
+   macro avg       0.54      0.52      0.52       247
+weighted avg       0.54      0.53      0.52       247
+
+
+处理股票: CEG
+Training models:  50%|█████     | 4/8 [00:06<00:06,  1.62s/it]标签分布: {2.0: 276, 1.0: 255, 0.0: 186}
+
+CEG - Random Forest Results:
+Accuracy: 0.6250
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.78      0.57      0.66        37
+        Flat       0.53      0.67      0.59        51
+          Up       0.66      0.62      0.64        56
+
+    accuracy                           0.62       144
+   macro avg       0.66      0.62      0.63       144
+weighted avg       0.64      0.62      0.63       144
+
+
+CEG - Gradient Boosting Results:
+Accuracy: 0.5625
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.56      0.41      0.47        37
+        Flat       0.50      0.55      0.52        51
+          Up       0.62      0.68      0.65        56
+
+    accuracy                           0.56       144
+   macro avg       0.56      0.54      0.55       144
+weighted avg       0.56      0.56      0.56       144
+
+
+处理股票: PWR
+Training models:  62%|██████▎   | 5/8 [00:07<00:04,  1.45s/it]标签分布: {2.0: 480, 1.0: 470, 0.0: 283}
+
+PWR - Random Forest Results:
+Accuracy: 0.6518
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.65      0.39      0.48        57
+        Flat       0.59      0.76      0.66        94
+          Up       0.74      0.71      0.72        96
+
+    accuracy                           0.65       247
+   macro avg       0.66      0.62      0.62       247
+weighted avg       0.66      0.65      0.64       247
+
+
+PWR - Gradient Boosting Results:
+Accuracy: 0.5547
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.46      0.21      0.29        57
+        Flat       0.54      0.64      0.58        94
+          Up       0.60      0.68      0.63        96
+
+    accuracy                           0.55       247
+   macro avg       0.53      0.51      0.50       247
+weighted avg       0.54      0.55      0.53       247
+
+
+处理股票: NVDA
+Training models:  75%|███████▌  | 6/8 [00:09<00:03,  1.53s/it]标签分布: {2.0: 576, 0.0: 375, 1.0: 282}
+
+NVDA - Random Forest Results:
+Accuracy: 0.6032
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.60      0.57      0.59        75
+        Flat       0.47      0.28      0.35        57
+          Up       0.64      0.78      0.70       115
+
+    accuracy                           0.60       247
+   macro avg       0.57      0.55      0.55       247
+weighted avg       0.59      0.60      0.59       247
+
+
+NVDA - Gradient Boosting Results:
+Accuracy: 0.5425
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.49      0.44      0.46        75
+        Flat       0.35      0.19      0.25        57
+          Up       0.60      0.78      0.68       115
+
+    accuracy                           0.54       247
+   macro avg       0.48      0.47      0.47       247
+weighted avg       0.51      0.54      0.52       247
+
+
+处理股票: TSLA
+Training models:  88%|████████▊ | 7/8 [00:11<00:01,  1.59s/it]标签分布: {2.0: 529, 0.0: 455, 1.0: 249}
+
+TSLA - Random Forest Results:
+Accuracy: 0.6559
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.64      0.76      0.70        91
+        Flat       0.55      0.36      0.43        50
+          Up       0.70      0.71      0.70       106
+
+    accuracy                           0.66       247
+   macro avg       0.63      0.61      0.61       247
+weighted avg       0.65      0.66      0.65       247
+
+
+TSLA - Gradient Boosting Results:
+Accuracy: 0.5668
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.58      0.66      0.62        91
+        Flat       0.39      0.24      0.30        50
+          Up       0.60      0.64      0.62       106
+
+    accuracy                           0.57       247
+   macro avg       0.52      0.51      0.51       247
+weighted avg       0.55      0.57      0.55       247
+
+
+=== 改进1: 集成学习 ===
+Training models: 100%|██████████| 8/8 [00:12<00:00,  1.59s/it]
+
+处理股票: RSG
+集成模型准确率: 0.6194
+
+处理股票: AZO
+集成模型准确率: 0.5911
+
+处理股票: FCX
+集成模型准确率: 0.5547
+
+处理股票: META
+集成模型准确率: 0.6113
+
+处理股票: CEG
+集成模型准确率: 0.5764
+
+处理股票: PWR
+集成模型准确率: 0.6113
+
+处理股票: NVDA
+集成模型准确率: 0.5425
+
+处理股票: TSLA
+集成模型准确率: 0.5870
+
+=== 改进2: 特征选择优化 ===
+
+处理股票: RSG
+优化后准确率: 0.7247
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 10}
+
+处理股票: AZO
+优化后准确率: 0.6518
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 50, 'feature_selection__k': 8}
+
+处理股票: FCX
+优化后准确率: 0.6680
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 8}
+
+处理股票: META
+优化后准确率: 0.6802
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 6}
+
+处理股票: CEG
+优化后准确率: 0.6389
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 10}
+
+处理股票: PWR
+优化后准确率: 0.6640
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 10}
+
+处理股票: NVDA
+优化后准确率: 0.6397
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 10}
+
+处理股票: TSLA
+优化后准确率: 0.5911
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 8}
+
+
+2. 三個模型的預測,亂序切分
+=== 股价趋势预测任务 ===
+Training models:   0%|          | 0/8 [00:00<?, ?it/s]选择的股票: ['RSG', 'AZO', 'FCX', 'META', 'CEG', 'PWR', 'NVDA', 'TSLA']
+
+处理股票: RSG
+标签分布: {1.0: 719, 2.0: 317, 0.0: 197}
+
+RSG - Random Forest Results:
+Accuracy: 0.6721
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.67      0.26      0.37        39
+        Flat       0.67      0.92      0.77       144
+          Up       0.69      0.38      0.48        64
+
+    accuracy                           0.67       247
+   macro avg       0.67      0.52      0.54       247
+weighted avg       0.67      0.67      0.64       247
+
+
+RSG - Gradient Boosting Results:
+Accuracy: 0.6275
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.67      0.21      0.31        39
+        Flat       0.64      0.88      0.74       144
+          Up       0.56      0.31      0.40        64
+
+    accuracy                           0.63       247
+   macro avg       0.62      0.47      0.48       247
+weighted avg       0.62      0.63      0.58       247
+
+
+RSG - XGBoost Results:
+Accuracy: 0.6680
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.59      0.26      0.36        39
+        Flat       0.68      0.87      0.76       144
+          Up       0.64      0.47      0.54        64
+
+    accuracy                           0.67       247
+   macro avg       0.64      0.53      0.55       247
+weighted avg       0.66      0.67      0.64       247
+
+Training models:  12%|█▎        | 1/8 [00:07<00:49,  7.03s/it]
+处理股票: AZO
+标签分布: {1.0: 557, 2.0: 402, 0.0: 274}
+
+AZO - Random Forest Results:
+Accuracy: 0.6316
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.56      0.36      0.44        55
+        Flat       0.61      0.73      0.66       112
+          Up       0.71      0.68      0.69        80
+
+    accuracy                           0.63       247
+   macro avg       0.62      0.59      0.60       247
+weighted avg       0.63      0.63      0.62       247
+
+
+AZO - Gradient Boosting Results:
+Accuracy: 0.5425
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.41      0.24      0.30        55
+        Flat       0.55      0.70      0.62       112
+          Up       0.58      0.54      0.56        80
+
+    accuracy                           0.54       247
+   macro avg       0.51      0.49      0.49       247
+weighted avg       0.53      0.54      0.53       247
+
+
+AZO - XGBoost Results:
+Accuracy: 0.6032
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.61      0.42      0.49        55
+        Flat       0.60      0.64      0.62       112
+          Up       0.61      0.68      0.64        80
+
+    accuracy                           0.60       247
+   macro avg       0.60      0.58      0.59       247
+weighted avg       0.60      0.60      0.60       247
+
+Training models:  25%|██▌       | 2/8 [00:13<00:38,  6.41s/it]
+处理股票: FCX
+标签分布: {2.0: 506, 0.0: 411, 1.0: 316}
+
+FCX - Random Forest Results:
+Accuracy: 0.6316
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.63      0.62      0.63        82
+        Flat       0.52      0.41      0.46        63
+          Up       0.68      0.77      0.72       102
+
+    accuracy                           0.63       247
+   macro avg       0.61      0.60      0.60       247
+weighted avg       0.62      0.63      0.62       247
+
+
+FCX - Gradient Boosting Results:
+Accuracy: 0.5142
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.51      0.52      0.51        82
+        Flat       0.34      0.22      0.27        63
+          Up       0.58      0.69      0.63       102
+
+    accuracy                           0.51       247
+   macro avg       0.48      0.48      0.47       247
+weighted avg       0.49      0.51      0.50       247
+
+
+FCX - XGBoost Results:
+Accuracy: 0.5911
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.64      0.61      0.62        82
+        Flat       0.39      0.32      0.35        63
+          Up       0.64      0.75      0.69       102
+
+    accuracy                           0.59       247
+   macro avg       0.56      0.56      0.56       247
+weighted avg       0.58      0.59      0.58       247
+
+Training models:  38%|███▊      | 3/8 [00:18<00:30,  6.06s/it]
+处理股票: META
+标签分布: {2.0: 479, 1.0: 400, 0.0: 354}
+
+META - Random Forest Results:
+Accuracy: 0.6518
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.72      0.68      0.70        71
+        Flat       0.58      0.47      0.52        80
+          Up       0.65      0.78      0.71        96
+
+    accuracy                           0.65       247
+   macro avg       0.65      0.64      0.64       247
+weighted avg       0.65      0.65      0.65       247
+
+
+META - Gradient Boosting Results:
+Accuracy: 0.5385
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.61      0.46      0.53        71
+        Flat       0.48      0.38      0.42        80
+          Up       0.53      0.73      0.62        96
+
+    accuracy                           0.54       247
+   macro avg       0.54      0.52      0.52       247
+weighted avg       0.54      0.54      0.53       247
+
+
+META - XGBoost Results:
+Accuracy: 0.5870
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.59      0.56      0.58        71
+        Flat       0.53      0.44      0.48        80
+          Up       0.62      0.73      0.67        96
+
+    accuracy                           0.59       247
+   macro avg       0.58      0.58      0.57       247
+weighted avg       0.58      0.59      0.58       247
+
+Training models:  50%|█████     | 4/8 [00:23<00:22,  5.56s/it]
+处理股票: CEG
+标签分布: {2.0: 276, 1.0: 255, 0.0: 186}
+
+CEG - Random Forest Results:
+Accuracy: 0.6250
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.78      0.57      0.66        37
+        Flat       0.53      0.67      0.59        51
+          Up       0.66      0.62      0.64        56
+
+    accuracy                           0.62       144
+   macro avg       0.66      0.62      0.63       144
+weighted avg       0.64      0.62      0.63       144
+
+
+CEG - Gradient Boosting Results:
+Accuracy: 0.5625
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.56      0.41      0.47        37
+        Flat       0.50      0.55      0.52        51
+          Up       0.62      0.68      0.65        56
+
+    accuracy                           0.56       144
+   macro avg       0.56      0.54      0.55       144
+weighted avg       0.56      0.56      0.56       144
+
+
+CEG - XGBoost Results:
+Accuracy: 0.6111
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.71      0.54      0.62        37
+        Flat       0.53      0.61      0.56        51
+          Up       0.65      0.66      0.65        56
+
+    accuracy                           0.61       144
+   macro avg       0.63      0.60      0.61       144
+weighted avg       0.62      0.61      0.61       144
+
+Training models:  62%|██████▎   | 5/8 [00:27<00:15,  5.01s/it]
+处理股票: PWR
+标签分布: {2.0: 480, 1.0: 470, 0.0: 283}
+
+PWR - Random Forest Results:
+Accuracy: 0.6518
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.65      0.39      0.48        57
+        Flat       0.59      0.76      0.66        94
+          Up       0.74      0.71      0.72        96
+
+    accuracy                           0.65       247
+   macro avg       0.66      0.62      0.62       247
+weighted avg       0.66      0.65      0.64       247
+
+
+PWR - Gradient Boosting Results:
+Accuracy: 0.5547
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.46      0.21      0.29        57
+        Flat       0.54      0.64      0.58        94
+          Up       0.60      0.68      0.63        96
+
+    accuracy                           0.55       247
+   macro avg       0.53      0.51      0.50       247
+weighted avg       0.54      0.55      0.53       247
+
+
+PWR - XGBoost Results:
+Accuracy: 0.6194
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.53      0.35      0.42        57
+        Flat       0.60      0.68      0.64        94
+          Up       0.67      0.72      0.69        96
+
+    accuracy                           0.62       247
+   macro avg       0.60      0.58      0.58       247
+weighted avg       0.61      0.62      0.61       247
+
+
+处理股票: NVDA
+Training models:  75%|███████▌  | 6/8 [00:34<00:11,  5.80s/it]标签分布: {2.0: 576, 0.0: 375, 1.0: 282}
+
+NVDA - Random Forest Results:
+Accuracy: 0.6032
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.60      0.57      0.59        75
+        Flat       0.47      0.28      0.35        57
+          Up       0.64      0.78      0.70       115
+
+    accuracy                           0.60       247
+   macro avg       0.57      0.55      0.55       247
+weighted avg       0.59      0.60      0.59       247
+
+
+NVDA - Gradient Boosting Results:
+Accuracy: 0.5425
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.49      0.44      0.46        75
+        Flat       0.35      0.19      0.25        57
+          Up       0.60      0.78      0.68       115
+
+    accuracy                           0.54       247
+   macro avg       0.48      0.47      0.47       247
+weighted avg       0.51      0.54      0.52       247
+
+
+NVDA - XGBoost Results:
+Accuracy: 0.5951
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.61      0.55      0.58        75
+        Flat       0.42      0.32      0.36        57
+          Up       0.64      0.77      0.70       115
+
+    accuracy                           0.60       247
+   macro avg       0.56      0.54      0.55       247
+weighted avg       0.58      0.60      0.58       247
+
+Training models:  88%|████████▊ | 7/8 [00:41<00:06,  6.12s/it]
+处理股票: TSLA
+标签分布: {2.0: 529, 0.0: 455, 1.0: 249}
+
+TSLA - Random Forest Results:
+Accuracy: 0.6559
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.64      0.76      0.70        91
+        Flat       0.55      0.36      0.43        50
+          Up       0.70      0.71      0.70       106
+
+    accuracy                           0.66       247
+   macro avg       0.63      0.61      0.61       247
+weighted avg       0.65      0.66      0.65       247
+
+
+TSLA - Gradient Boosting Results:
+Accuracy: 0.5668
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.58      0.66      0.62        91
+        Flat       0.39      0.24      0.30        50
+          Up       0.60      0.64      0.62       106
+
+    accuracy                           0.57       247
+   macro avg       0.52      0.51      0.51       247
+weighted avg       0.55      0.57      0.55       247
+
+
+TSLA - XGBoost Results:
+Accuracy: 0.5789
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.60      0.62      0.61        91
+        Flat       0.38      0.38      0.38        50
+          Up       0.65      0.64      0.65       106
+
+    accuracy                           0.58       247
+   macro avg       0.55      0.55      0.55       247
+weighted avg       0.58      0.58      0.58       247
+
+
+=== 改进1: 集成学习 ===
+
+处理股票: RSG
+Training models: 100%|██████████| 8/8 [00:47<00:00,  5.93s/it]
+集成模型准确率: 0.6194
+
+处理股票: AZO
+集成模型准确率: 0.5911
+
+处理股票: FCX
+集成模型准确率: 0.5547
+
+处理股票: META
+集成模型准确率: 0.6194
+
+处理股票: CEG
+集成模型准确率: 0.5764
+
+处理股票: PWR
+集成模型准确率: 0.6113
+
+处理股票: NVDA
+集成模型准确率: 0.5425
+
+处理股票: TSLA
+集成模型准确率: 0.5870
+
+=== 改进2: 特征选择优化 ===
+
+处理股票: RSG
+优化后准确率: 0.7247
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 10}
+
+处理股票: AZO
+优化后准确率: 0.6518
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 50, 'feature_selection__k': 8}
+
+处理股票: FCX
+优化后准确率: 0.6680
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 8}
+
+处理股票: META
+优化后准确率: 0.6842
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 6}
+
+处理股票: CEG
+优化后准确率: 0.6389
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 10}
+
+处理股票: PWR
+优化后准确率: 0.6478
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 10}
+
+处理股票: NVDA
+优化后准确率: 0.6397
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 100, 'feature_selection__k': 10}
+
+处理股票: TSLA
+优化后准确率: 0.5911
+最佳参数: {'classifier__max_depth': None, 'classifier__n_estimators': 150, 'feature_selection__k': 8}
+
+
+3. 三個模型預測，按序訓練
+=== 股价趋势预测任务 ===
+选择的股票: ['RSG', 'AZO', 'FCX', 'META', 'CEG', 'PWR', 'NVDA', 'TSLA']
+
+处理股票: RSG
+Training models:   0%|          | 0/8 [00:00<?, ?it/s]标签分布: {1.0: 719, 2.0: 317, 0.0: 197}
+
+RSG - Random Forest Results:
+Accuracy: 0.6437
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.00      0.00      0.00        28
+        Flat       0.66      0.97      0.79       164
+          Up       0.00      0.00      0.00        55
+
+    accuracy                           0.64       247
+   macro avg       0.22      0.32      0.26       247
+weighted avg       0.44      0.64      0.52       247
+
+
+RSG - Gradient Boosting Results:
+Accuracy: 0.5830
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.10      0.14      0.12        28
+        Flat       0.69      0.83      0.75       164
+          Up       0.44      0.07      0.12        55
+
+    accuracy                           0.58       247
+   macro avg       0.41      0.35      0.33       247
+weighted avg       0.57      0.58      0.54       247
+
+
+RSG - XGBoost Results:
+Accuracy: 0.6518
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.00      0.00      0.00        28
+        Flat       0.66      0.98      0.79       164
+          Up       0.00      0.00      0.00        55
+
+    accuracy                           0.65       247
+   macro avg       0.22      0.33      0.26       247
+weighted avg       0.44      0.65      0.52       247
+
+Training models:  12%|█▎        | 1/8 [00:06<00:45,  6.55s/it]
+处理股票: AZO
+标签分布: {1.0: 557, 2.0: 402, 0.0: 274}
+
+AZO - Random Forest Results:
+Accuracy: 0.2753
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.23      1.00      0.37        51
+        Flat       0.71      0.11      0.20       131
+          Up       1.00      0.03      0.06        65
+
+    accuracy                           0.28       247
+   macro avg       0.65      0.38      0.21       247
+weighted avg       0.69      0.28      0.20       247
+
+
+AZO - Gradient Boosting Results:
+Accuracy: 0.2510
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.22      0.90      0.35        51
+        Flat       0.62      0.11      0.19       131
+          Up       0.10      0.02      0.03        65
+
+    accuracy                           0.25       247
+   macro avg       0.31      0.34      0.19       247
+weighted avg       0.40      0.25      0.18       247
+
+
+AZO - XGBoost Results:
+Accuracy: 0.4413
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.24      0.47      0.32        51
+        Flat       0.58      0.62      0.60       131
+          Up       0.50      0.06      0.11        65
+
+    accuracy                           0.44       247
+   macro avg       0.44      0.38      0.34       247
+weighted avg       0.49      0.44      0.41       247
+
+
+处理股票: FCX
+Training models:  25%|██▌       | 2/8 [00:11<00:34,  5.70s/it]标签分布: {2.0: 506, 0.0: 412, 1.0: 315}
+
+FCX - Random Forest Results:
+Accuracy: 0.3846
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.39      0.81      0.53        90
+        Flat       0.28      0.16      0.21        79
+          Up       0.60      0.12      0.19        78
+
+    accuracy                           0.38       247
+   macro avg       0.43      0.36      0.31       247
+weighted avg       0.42      0.38      0.32       247
+
+
+FCX - Gradient Boosting Results:
+Accuracy: 0.3603
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.38      0.81      0.52        90
+        Flat       0.23      0.09      0.13        79
+          Up       0.33      0.12      0.17        78
+
+    accuracy                           0.36       247
+   macro avg       0.32      0.34      0.27       247
+weighted avg       0.32      0.36      0.29       247
+
+
+FCX - XGBoost Results:
+Accuracy: 0.4089
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.42      0.81      0.55        90
+        Flat       0.32      0.20      0.25        79
+          Up       0.55      0.15      0.24        78
+
+    accuracy                           0.41       247
+   macro avg       0.43      0.39      0.35       247
+weighted avg       0.43      0.41      0.36       247
+
+Training models:  38%|███▊      | 3/8 [00:17<00:28,  5.72s/it]
+处理股票: META
+标签分布: {2.0: 479, 1.0: 400, 0.0: 354}
+
+META - Random Forest Results:
+Accuracy: 0.2186
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.21      0.98      0.35        50
+        Flat       0.31      0.05      0.09        96
+          Up       0.00      0.00      0.00       101
+
+    accuracy                           0.22       247
+   macro avg       0.17      0.34      0.15       247
+weighted avg       0.16      0.22      0.11       247
+
+
+META - Gradient Boosting Results:
+Accuracy: 0.2308
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.20      0.76      0.31        50
+        Flat       0.35      0.19      0.24        96
+          Up       0.50      0.01      0.02       101
+
+    accuracy                           0.23       247
+   macro avg       0.35      0.32      0.19       247
+weighted avg       0.38      0.23      0.17       247
+
+
+META - XGBoost Results:
+Accuracy: 0.2186
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.20      0.88      0.33        50
+        Flat       0.27      0.06      0.10        96
+          Up       0.67      0.04      0.07       101
+
+    accuracy                           0.22       247
+   macro avg       0.38      0.33      0.17       247
+weighted avg       0.42      0.22      0.14       247
+
+
+处理股票: CEG
+Training models:  50%|█████     | 4/8 [00:23<00:23,  5.86s/it]标签分布: {2.0: 276, 1.0: 255, 0.0: 186}
+
+CEG - Random Forest Results:
+Accuracy: 0.3542
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.28      0.09      0.14        55
+        Flat       0.25      0.05      0.09        37
+          Up       0.37      0.85      0.52        52
+
+    accuracy                           0.35       144
+   macro avg       0.30      0.33      0.25       144
+weighted avg       0.30      0.35      0.26       144
+
+
+CEG - Gradient Boosting Results:
+Accuracy: 0.4097
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.46      0.33      0.38        55
+        Flat       0.33      0.03      0.05        37
+          Up       0.39      0.77      0.52        52
+
+    accuracy                           0.41       144
+   macro avg       0.40      0.37      0.32       144
+weighted avg       0.40      0.41      0.35       144
+
+
+CEG - XGBoost Results:
+Accuracy: 0.3403
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.42      0.09      0.15        55
+        Flat       0.14      0.05      0.08        37
+          Up       0.36      0.81      0.49        52
+
+    accuracy                           0.34       144
+   macro avg       0.31      0.32      0.24       144
+weighted avg       0.32      0.34      0.26       144
+
+
+处理股票: PWR
+Training models:  62%|██████▎   | 5/8 [00:27<00:16,  5.36s/it]标签分布: {2.0: 480, 1.0: 470, 0.0: 283}
+
+PWR - Random Forest Results:
+Accuracy: 0.2510
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.24      1.00      0.38        55
+        Flat       0.44      0.07      0.12        99
+          Up       0.00      0.00      0.00        93
+
+    accuracy                           0.25       247
+   macro avg       0.23      0.36      0.17       247
+weighted avg       0.23      0.25      0.13       247
+
+
+PWR - Gradient Boosting Results:
+Accuracy: 0.2429
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.24      1.00      0.39        55
+        Flat       0.28      0.05      0.09        99
+          Up       0.00      0.00      0.00        93
+
+    accuracy                           0.24       247
+   macro avg       0.17      0.35      0.16       247
+weighted avg       0.16      0.24      0.12       247
+
+
+PWR - XGBoost Results:
+Accuracy: 0.2429
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.24      1.00      0.39        55
+        Flat       0.29      0.05      0.09        99
+          Up       0.00      0.00      0.00        93
+
+    accuracy                           0.24       247
+   macro avg       0.18      0.35      0.16       247
+weighted avg       0.17      0.24      0.12       247
+
+Training models:  75%|███████▌  | 6/8 [00:34<00:11,  5.80s/it]
+处理股票: NVDA
+标签分布: {2.0: 576, 0.0: 375, 1.0: 282}
+
+NVDA - Random Forest Results:
+Accuracy: 0.3644
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.33      0.76      0.46        75
+        Flat       0.19      0.15      0.17        39
+          Up       0.66      0.20      0.31       133
+
+    accuracy                           0.36       247
+   macro avg       0.39      0.37      0.31       247
+weighted avg       0.48      0.36      0.33       247
+
+
+NVDA - Gradient Boosting Results:
+Accuracy: 0.3320
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.25      0.04      0.07        75
+        Flat       0.18      0.64      0.28        39
+          Up       0.55      0.41      0.47       133
+
+    accuracy                           0.33       247
+   macro avg       0.33      0.36      0.27       247
+weighted avg       0.40      0.33      0.32       247
+
+
+NVDA - XGBoost Results:
+Accuracy: 0.3279
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.28      0.59      0.38        75
+        Flat       0.19      0.21      0.20        39
+          Up       0.62      0.22      0.32       133
+
+    accuracy                           0.33       247
+   macro avg       0.36      0.34      0.30       247
+weighted avg       0.45      0.33      0.32       247
+
+Training models:  88%|████████▊ | 7/8 [00:39<00:05,  5.61s/it]
+处理股票: TSLA
+标签分布: {2.0: 529, 0.0: 455, 1.0: 249}
+
+TSLA - Random Forest Results:
+Accuracy: 0.3887
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.38      0.29      0.33        92
+        Flat       0.23      0.10      0.14        51
+          Up       0.42      0.62      0.50       104
+
+    accuracy                           0.39       247
+   macro avg       0.34      0.34      0.32       247
+weighted avg       0.36      0.39      0.36       247
+
+
+TSLA - Gradient Boosting Results:
+Accuracy: 0.3887
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.42      0.24      0.30        92
+        Flat       0.23      0.12      0.16        51
+          Up       0.40      0.65      0.50       104
+
+    accuracy                           0.39       247
+   macro avg       0.35      0.34      0.32       247
+weighted avg       0.37      0.39      0.36       247
+
+
+TSLA - XGBoost Results:
+Accuracy: 0.3846
+Classification Report:
+              precision    recall  f1-score   support
+
+        Down       0.43      0.30      0.36        92
+        Flat       0.25      0.20      0.22        51
+          Up       0.40      0.55      0.46       104
+
+    accuracy                           0.38       247
+   macro avg       0.36      0.35      0.35       247
+weighted avg       0.38      0.38      0.37       247
+
+Training models: 100%|██████████| 8/8 [00:44<00:00,  5.58s/it]
+
+=== 改进1: 集成学习 ===
+
+处理股票: RSG
+集成模型准确率: 0.6235
+
+处理股票: AZO
+集成模型准确率: 0.2834
+
+处理股票: FCX
+集成模型准确率: 0.3806
+
+处理股票: META
+集成模型准确率: 0.2389
+
+处理股票: CEG
+集成模型准确率: 0.3889
+
+处理股票: PWR
+集成模型准确率: 0.2429
+
+处理股票: NVDA
+集成模型准确率: 0.3036
+
+处理股票: TSLA
+集成模型准确率: 0.4251
+
+=== 改进2: 特征选择优化 ===
+
+处理股票: RSG
+优化后准确率: 0.6640
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 150, 'feature_selection__k': 8}
+
+处理股票: AZO
+优化后准确率: 0.2591
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 150, 'feature_selection__k': 8}
+
+处理股票: FCX
+优化后准确率: 0.3725
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 150, 'feature_selection__k': 8}
+
+处理股票: META
+优化后准确率: 0.2186
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 50, 'feature_selection__k': 10}
+
+处理股票: CEG
+优化后准确率: 0.3681
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 50, 'feature_selection__k': 10}
+
+处理股票: PWR
+优化后准确率: 0.2429
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 150, 'feature_selection__k': 10}
+
+处理股票: NVDA
+优化后准确率: 0.2834
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 50, 'feature_selection__k': 8}
+
+处理股票: TSLA
+优化后准确率: 0.4049
+最佳参数: {'classifier__max_depth': 5, 'classifier__n_estimators': 50, 'feature_selection__k': 10}
+
